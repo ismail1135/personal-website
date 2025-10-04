@@ -4,11 +4,14 @@
      "projectName":"Personal Website",
      "time":"03/10/2025",
      "type":"completed",
-     "content":"A passionate Frontend & Backend Developer from Türkiye Currently studying Web Development at Ankara University💻 Learned the basics of Web & Mobile Frontend in high school🚀 Took a gap year to improve myself and explore differenttechnologies🌱 Comfortable with Flutter and always learning more about Web Development⚡ Enjoy building projects that combine creativity and functionality"
+     "content": "Today marks the first day I’m truly trying to be disciplined. For a long time, I’ve been someone who starts projects with excitement, only to leave them unfinished halfway through. Looking back, I think I lacked a real reason — a sense of why to keep going. Even when I told myself that I was doing it for personal growth, there was always this voice inside asking, 'Is it still not done?' And that impatience often made me stop before I even reached the good part. Then, yesterday, I stumbled upon a page on social media — and it felt like the exact thing I’d been waiting for. It was inspiring, simple, and yet deeply motivating. For the first time in a while, I felt that spark again. So, I’ve decided to begin — slowly, but with intention. I’ll start by building my personal website, then move on to a favorite movies list, a countdown tool, and a weather app using an API. Each step will be a piece of my journey — and I’ll keep every update and reflection right here, on my website. This time, I’m not chasing perfection. I’m just learning to stay — to build — and to keep going."
 },
 {
-     "title":"StopWatch App",
-     "time":"03/10/2025",
-     "type":"progress"
+  "title": "Project 2",
+  "projectName": "Countdown Tool",
+  "time": "04/10/2025",
+  "type": "progress",
+  "content": "This project is a simple yet meaningful countdown timer, a tool that helps me keep track of how much time is left until an important event or goal. It's simply a practice of working with dates and timers in JavaScript. The design will be minimal and calming, focusing on clarity and purpose."
+
 }
 ]
