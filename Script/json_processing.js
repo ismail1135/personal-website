@@ -58,7 +58,6 @@ fetch("my_road_map.json").then(res => res.json())
                 window.scrollTo(0,700);
                    bottomSheet.style.transform ='scale(0) translateY(-100vh)';
                    bottomSheet.style.opacity = 0;
-
                    content.style.opacity = 1;
                    content.style.transform = 'scale(1)'
 
@@ -87,8 +86,8 @@ fetch("my_road_map.json").then(res => res.json())
                stitle.style.opacity = 0.7
                scontent.style.opacity = 0.7
 
-                  stitle.style.filter = 'blur(0.2rem)'
-                  scontent.style.filter = 'blur(0.2rem)'
+                  stitle.style.filter = 'blur(0.5rem)'
+                  scontent.style.filter = 'blur(0.5rem)'
 
 
                setTimeout(()=>{
@@ -98,7 +97,7 @@ fetch("my_road_map.json").then(res => res.json())
                scontent.style.opacity = 1
                stitle.style.filter = 'blur(0.0rem)'
                   scontent.style.filter = 'blur(0.0rem)'
-               }, 150);
+               }, 200);
 
                
 
