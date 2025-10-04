@@ -60,6 +60,7 @@ fetch("my_road_map.json").then(res => res.json())
                    bottomSheet.style.opacity = 0;
                    content.style.opacity = 1;
                    content.style.transform = 'scale(1)'
+                   document.body.style.overflow = 'scroll';
 
                    
                    
