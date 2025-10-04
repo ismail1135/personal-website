@@ -56,11 +56,13 @@ fetch("my_road_map.json").then(res => res.json())
 
           close.addEventListener('click', (e)=>{
                 window.scrollTo(0,700);
-                   bottomSheet.style.transform ='scale(0)';
+                   bottomSheet.style.transform ='scale(0) translateY(-100vh)';
                    bottomSheet.style.opacity = 0;
+
                    content.style.opacity = 1;
                    content.style.transform = 'scale(1)'
-                   content.style.height = 'max-content'
+
+                   
                    
           })
 
@@ -68,11 +70,10 @@ fetch("my_road_map.json").then(res => res.json())
 
                if(window.innerWidth <= 768){
                     window.scrollTo(0,0);
-                   bottomSheet.style.transform ='scale(1)';
+                   bottomSheet.style.transform ='scale(1) translateY(0)';
                    bottomSheet.style.opacity = 1;
-                   content.style.opacity = 0;
-                   content.style.transform = 'scale(0)'
-                   content.style.height = '0px'
+                   document.body.style.overflow = 'hidden';
+                   
 
                     shtitle.textContent = item.title + ' | ' + item.projectName;
 
