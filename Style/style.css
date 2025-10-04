@@ -229,6 +229,7 @@ body {
   position: absolute;
   left: 0;
   width: 200%;
+  overflow-x: hidden;
   height: 100px;
   background-size: 50px 50px;
   animation: waveMove 6s infinite ease-in-out;
@@ -455,6 +456,7 @@ body {
   left: 0;
   width: 200%;
   height: 100px;
+  overflow-x: hidden;
   background-size: 50px 50px;
   animation: waveMove 6s infinite ease-in-out;
 }
