@@ -1,0 +1,672 @@
+:root {
+  --bg: #f7f7f7;
+  --grey: #f1f1f1;
+  --black: #111;
+  --blue: #0046ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 300ms ease-in-out;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.head ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.head ul li a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.head ul li a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  width: 100%;
+  transform-origin: center top;
+}
+
+.content .scrollCircle {
+  position: absolute;
+  top: 88vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--black);
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10cap;
+  color: var(--grey);
+  cursor: pointer;
+}
+
+.content .scrollCircle p {
+  transition: transform 300ms ease-in-out;
+  transform: scale(1);
+  opacity: 1;
+  display: inline-block; /* veya block */
+}
+
+.content .scrollCircle:hover p {
+  transform: scale(0);
+  height: 0;
+  transform-origin: bottom center;
+}
+
+.content .scrollCircle:hover i {
+  animation: bounce 700ms infinite 0ms backwards ease-in-out;
+  font-size: 2rem;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+
+  75% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.content .contentSection {
+  width: 100%;
+  height: 85vh;
+}
+
+/* içerikler */
+
+#about {
+  width: 80%;
+  gap: 10vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about .side {
+  width: 100%;
+}
+
+#about .side:nth-of-type(2) {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+#about .side:nth-of-type(2) .photoParent {
+  background: linear-gradient(
+    to left,
+    rgba(38, 49, 253, 0.029),
+    rgba(255, 255, 255, 0.073)
+  );
+  border: white solid 0.2rem;
+  border-radius: 2.5cap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#about .side:nth-of-type(2) .photoParent .circle {
+  background-color: var(--grey);
+  width: 20vh;
+  height: 20vh;
+  margin-bottom: 4rem;
+  border-radius: 100cap;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+#about .side:nth-of-type(2) .photoParent .circle img {
+  width: 15vh;
+}
+
+#about .side:nth-of-type(2) .photoParent .info {
+  background-color: #111;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 2.5cap 2.5cap;
+  color: white;
+  padding: 1rem;
+}
+
+#about .side:nth-of-type(2) .photoParent .info ul {
+  list-style-type: none;
+}
+#about .side:nth-of-type(2) .photoParent .info ul li {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+#about .side:nth-of-type(2) .photoParent .info ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#about h1 {
+  font-size: 4rem;
+}
+
+#about p {
+  font-size: 1rem;
+}
+
+#about .search {
+  margin-top: 3rem;
+  width: 100%;
+  background-color: var(--blue);
+  padding: 1rem 0rem;
+  color: white;
+  border-radius: 10cap;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+#about a {
+  text-decoration: none;
+}
+
+#about .search i {
+  margin-left: 1rem;
+}
+
+#roadmap {
+  background-color: var(--black);
+  color: white;
+  padding-top: 10rem;
+}
+
+#roadmap::after,
+#roadmap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100px;
+  background-size: 50px 50px;
+  animation: waveMove 6s infinite ease-in-out;
+}
+
+#roadmap::before {
+  top: 88vh;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,50 C150,100 350,0 600,50 C850,100 1050,0 1200,50 L1200,120 L0,120 Z' fill='%23111111' fill-opacity='1'/%3E%3C/svg%3E")
+    repeat-x;
+  background-size: 2400px 120px;
+  background-position: bottom;
+  animation: waveMove 4s linear infinite;
+}
+
+@keyframes waveMove {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 2400px;
+  }
+}
+
+#roadmap .safeArea {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: start;
+}
+
+#roadmap .safeArea .side {
+  width: 50%;
+}
+
+#roadmap .safeArea .side:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+}
+
+#roadmap .safeArea .side #s-content {
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.7;
+  text-justify: newspaper;
+}
+
+#roadmap h1 {
+  margin-bottom: 2rem;
+}
+
+#roadmap ul {
+  list-style-type: none;
+}
+
+#roadmap .itemSection {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+}
+
+#roadmap .itemSection .line {
+  width: 0.1rem;
+  height: 5rem;
+  background-color: gainsboro;
+}
+
+#roadmap .itemSection .point {
+  width: 1rem;
+  height: 1rem;
+  background-color: gainsboro;
+  border: #111 solid 0.4rem;
+  border-radius: 10cap;
+  position: absolute;
+  left: -0.8rem;
+  top: 0;
+}
+
+#roadmap .row {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#roadmap p {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+#roadmap .time {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.3;
+  transform: translateY(2rem);
+}
+
+#work {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+#contact {
+  background-color: var(--black);
+  position: relative;
+  padding-bottom: 55vh;
+  color: white;
+  display: flex;
+}
+
+#contact .form {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#contact .form form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact .row {
+  display: flex;
+  gap: 1rem;
+}
+
+#contact .form form h1 {
+  margin-bottom: 8vh;
+}
+
+#contact input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 1rem 0.4rem;
+  border-radius: 1cap;
+  margin-bottom: 1rem;
+  background: white;
+}
+
+#contact textarea {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 15rem;
+  min-height: 15rem;
+  padding: 0.1rem;
+  border: none;
+  outline: none;
+  border-radius: 1cap;
+  background: white;
+}
+
+#contact button {
+  width: 100%;
+  margin-top: 4vh;
+  padding: 0.7rem 0;
+  border-radius: 1cap;
+  outline: none;
+  border: none;
+  background: white;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#contact button:hover p {
+  transform: scale(0);
+  transform-origin: center center;
+}
+
+#contact button:hover i {
+  animation: bounce-x 700ms infinite 0ms backwards ease-in-out;
+}
+
+@keyframes bounce-x {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45vh;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--black);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100px;
+  background-size: 50px 50px;
+  animation: waveMove 6s infinite ease-in-out;
+}
+
+.footer::before {
+  top: -5vh;
+  z-index: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,50 C150,100 350,0 600,50 C850,100 1050,0 1200,50 L1200,120 L0,120 Z' fill='%23f7f7f7' fill-opacity='1'/%3E%3C/svg%3E")
+    repeat-x;
+  background-size: 2400px 120px;
+  background-position: bottom;
+  animation: waveMove 4s linear infinite;
+}
+
+.footer .social {
+  width: 100%;
+}
+
+.footer .social .parent {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer .social .circle {
+  background-color: var(--black);
+  display: flex; /* Flexbox aktif */
+  align-items: center; /* dikey ortala */
+  justify-content: center; /* yatay ortala */
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%; /* yuvarlak yapmak için */
+  cursor: pointer;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer .links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20%;
+}
+
+.footer .links p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
+.footer .links ul {
+  list-style-type: none;
+}
+
+.footer .links ul li {
+  margin-bottom: 1.5rem;
+}
+
+.footer .links ul li a {
+  color: var(--black);
+  opacity: 0.8;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+
+.footer .links ul li a:hover {
+  text-decoration: underline;
+}
+
+/* telefon */
+
+@media (max-width: 768px) {
+  #about {
+    width: 90%;
+    margin: auto;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #about .side {
+    width: 100%;
+  }
+  #about .side:nth-of-type(2) .photoParent {
+    display: none;
+    width: 0px;
+  }
+
+  #roadmap .safeArea {
+    flex-direction: column;
+  }
+
+  #roadmap .safeArea .side:nth-of-type(2) {
+    display: none;
+    width: 100%;
+  }
+
+  #work {
+    font-size: 1.3rem;
+  }
+
+  #contact {
+    margin-bottom: 0vh;
+  }
+
+  #contact .form form {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 0;
+    bottom: -15rem;
+  }
+
+  .footer .social {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer .links p {
+    text-align: center;
+  }
+
+  .footer .links ul li {
+    text-align: center;
+  }
+
+  .roadMapDetails {
+    width: 100%;
+    height: 90vh;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--black);
+    border-radius: 5cap 5cap 0 0;
+    box-shadow: #000000 0px -5rem 50rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transform: scale(0);
+    opacity: 0;
+    box-sizing: content-box;
+    color: white;
+    transition: all 500ms ease-in-out;
+  }
+
+  .roadMapDetails .close {
+    width: 7vw;
+    height: 7vw;
+    background-color: white;
+    clip-path: circle();
+    display: flex;
+    position: absolute;
+    top: 2rem;
+    left: 85%;
+  }
+
+  .roadMapDetails .safeArea {
+    width: 80%;
+    margin: 0px auto;
+  }
+
+  .roadMapDetails .safeArea h3 {
+    margin-top: 5rem;
+  }
+
+  .roadMapDetails .safeArea p {
+    margin-top: 1rem;
+    opacity: 0.7;
+    font-size: 1rem;
+  }
+
+  .roadMapDetails::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (min-width: 1020px) {
+  #about .side:nth-of-type(2) .photoParent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 20rem;
+    padding: 0;
+  }
+
+  #about .side:nth-of-type(2) .photoParent .info {
+    position: relative;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    border-radius: 0;
+  }
+
+  #about .side:nth-of-type(2) .photoParent .circle {
+    position: absolute;
+    width: 11vw;
+    height: 11vw;
+    left: 3.5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 200ms;
+  }
+}
