@@ -9,7 +9,15 @@
 {
   "title": "Project 2",
   "projectName": "Countdown Tool",
-  "time": "04/10/2025",
+  "time": "06/10/2025",
+  "type": "completed",
+  "content": "This project is a simple yet meaningful countdown timer, a tool that helps me keep track of how much time is left until an important event or goal. It's simply a practice of working with dates and timers in JavaScript. The design will be minimal and calming, focusing on clarity and purpose."
+
+},
+{
+  "title": "Project 3",
+  "projectName": "Product Advertising ",
+  "time": "06/10/2025",
   "type": "progress",
   "content": "This project is a simple yet meaningful countdown timer, a tool that helps me keep track of how much time is left until an important event or goal. It's simply a practice of working with dates and timers in JavaScript. The design will be minimal and calming, focusing on clarity and purpose."
 
