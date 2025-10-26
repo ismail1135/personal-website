@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refund Policy | İsmail Altın</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #333; }
+    h1, h2 { color: #111; }
+  </style>
+</head>
+<body>
+  <h1>Refund Policy</h1>
+  <p>We want you to be fully satisfied with your purchase. If you encounter any issues, please contact us within 14 days of your purchase.</p>
+
+  <h2>Eligibility for Refunds</h2>
+  <p>Refunds may be granted for accidental purchases, technical issues preventing usage, or billing errors. Refunds will not be issued for change of mind after successful service delivery.</p>
+
+  <h2>Processing</h2>
+  <p>All refund requests are handled by our payment partner <strong>Paddle.com</strong>. Please contact Paddle support with your order number for processing.</p>
+
+  <h2>Contact</h2>
+  <p>For refund assistance, you can reach us at <a href="mailto:support@ismail-altin.com">support@ismail-altin.com</a>.</p>
+</body>
+</html>
