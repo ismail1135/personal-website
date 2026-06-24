@@ -24,8 +24,4 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   }
-  "scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d out"
-}
 }
