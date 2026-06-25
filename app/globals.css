@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #2BA4D8;
+  --tgreen:#CEFC9A;
 }
 
 @theme inline {
@@ -10,12 +12,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
+  --color-green: var(--tgreen);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --accent: #2BA4D8;
+    --tgreen:#CEFC9A;
   }
 }
 

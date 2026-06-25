@@ -1,11 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export', // Projeyi statik HTML/CSS/JS olarak çıktı alır
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  output: 'export',
   images: {
-    unoptimized: true, // GitHub Pages görsel optimizasyon servislerini desteklemediği için bunu açmalıyız
+    unoptimized: true,
   },
-  // EĞER siten "kullaniciadi.github.io/repo-adi" şeklinde alt klasörde çalışacaksa:
-  // basePath: '/repo-adi', 
 };
 
-module.exports = nextConfig;
+export default nextConfig;
